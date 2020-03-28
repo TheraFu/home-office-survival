@@ -103,15 +103,11 @@
 		6B098138242EC0A6000267A2 /* TechAgeSurvival */ = {
 			isa = PBXGroup;
 			children = (
-				6B098139242EC0A6000267A2 /* AppDelegate.swift */,
-				6B09813B242EC0A6000267A2 /* GameScene.sks */,
-				6B09813D242EC0A6000267A2 /* Actions.sks */,
-				6B09813F242EC0A6000267A2 /* GameScene.swift */,
-				6B098141242EC0A6000267A2 /* GameViewController.swift */,
-				6B098143242EC0A6000267A2 /* Main.storyboard */,
-				6B098146242EC0A9000267A2 /* Assets.xcassets */,
-				6B098148242EC0A9000267A2 /* LaunchScreen.storyboard */,
 				6B09814B242EC0A9000267A2 /* Info.plist */,
+				6B098146242EC0A9000267A2 /* Assets.xcassets */,
+				6B098173242ED2F0000267A2 /* Views */,
+				6B098172242ED2DB000267A2 /* Templates */,
+				6B098171242EC161000267A2 /* Scene */,
 			);
 			path = TechAgeSurvival;
 			sourceTree = "<group>";
@@ -132,6 +128,34 @@
 				6B098161242EC0A9000267A2 /* Info.plist */,
 			);
 			path = TechAgeSurvivalUITests;
+			sourceTree = "<group>";
+		};
+		6B098171242EC161000267A2 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				6B09813B242EC0A6000267A2 /* GameScene.sks */,
+				6B09813F242EC0A6000267A2 /* GameScene.swift */,
+				6B09813D242EC0A6000267A2 /* Actions.sks */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		6B098172242ED2DB000267A2 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				6B098139242EC0A6000267A2 /* AppDelegate.swift */,
+			);
+			name = Templates;
+			sourceTree = "<group>";
+		};
+		6B098173242ED2F0000267A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B098148242EC0A9000267A2 /* LaunchScreen.storyboard */,
+				6B098143242EC0A6000267A2 /* Main.storyboard */,
+				6B098141242EC0A6000267A2 /* GameViewController.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
