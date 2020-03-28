@@ -17,6 +17,7 @@
 		6B09814A242EC0A9000267A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B098148242EC0A9000267A2 /* LaunchScreen.storyboard */; };
 		6B098155242EC0A9000267A2 /* TechAgeSurvivalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B098154242EC0A9000267A2 /* TechAgeSurvivalTests.swift */; };
 		6B098160242EC0A9000267A2 /* TechAgeSurvivalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B09815F242EC0A9000267A2 /* TechAgeSurvivalUITests.swift */; };
+		6B098177242FB4E5000267A2 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B098176242FB4E5000267A2 /* ProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		6B09815B242EC0A9000267A2 /* TechAgeSurvivalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechAgeSurvivalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B09815F242EC0A9000267A2 /* TechAgeSurvivalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechAgeSurvivalUITests.swift; sourceTree = "<group>"; };
 		6B098161242EC0A9000267A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B098176242FB4E5000267A2 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		6B098171242EC161000267A2 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				6B098176242FB4E5000267A2 /* ProgressBar.swift */,
 				6B09813B242EC0A6000267A2 /* GameScene.sks */,
 				6B09813F242EC0A6000267A2 /* GameScene.swift */,
 				6B09813D242EC0A6000267A2 /* Actions.sks */,
@@ -293,6 +296,7 @@
 			files = (
 				6B098140242EC0A6000267A2 /* GameScene.swift in Sources */,
 				6B098142242EC0A6000267A2 /* GameViewController.swift in Sources */,
+				6B098177242FB4E5000267A2 /* ProgressBar.swift in Sources */,
 				6B09813A242EC0A6000267A2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
