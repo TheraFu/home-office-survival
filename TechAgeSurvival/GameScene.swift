@@ -32,12 +32,18 @@ class GameScene: SKScene {
     private var healthbar : SKSpriteNode!
     private var happinessbar : SKSpriteNode!
     
+    private var waterbutton : FTButtonNode!
+    private var eyebutton : FTButtonNode!
+    private var fitnessbutton : FTButtonNode!
+
     private var eyevalue : CGFloat = 100
     private var watervalue : CGFloat = 60
     private var fitnessvalue : CGFloat = 0
     private var healthvalue : CGFloat = 80
     private var happinessvalue : CGFloat = 100
-    
+    private var stepvalue: CGFloat = 0
+    private var fitnessbase: CGFloat = 0
+        
     private let progressBarSize: CGFloat = 200
     private var fitnessGoal: CGFloat = 8000
 
@@ -60,6 +66,38 @@ class GameScene: SKScene {
         self.healthbar = self.childNode(withName: "//HealthBar") as? SKSpriteNode
         self.happinessbar = self.childNode(withName: "//HappinessBar") as? SKSpriteNode
         
+        self.eyebutton = self.childNode(withName: "//EyeButton") as? FTButtonNode
+        self.waterbutton = self.childNode(withName: "//WaterButton") as? FTButtonNode
+        self.fitnessbutton = self.childNode(withName: "//FitnessButton") as? FTButtonNode
+        
+//        let buttonTexture: SKTexture! = SKTexture(imageNamed: "button")
+        let buttonTextureSelected = SKTexture(imageNamed: "upicon_inverse.png")
+//        let button = FTButtonNode(normalTexture: buttonTexture, selectedTexture: buttonTextureSelected, disabledTexture: buttonTexture)
+        eyebutton.selectedTexture = buttonTextureSelected
+        waterbutton.selectedTexture = buttonTextureSelected
+        fitnessbutton.selectedTexture = buttonTextureSelected
+        eyebutton.setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(self.eyeupdate))
+        waterbutton.setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(self.waterupdate))
+        fitnessbutton.setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(self.fitnessupdate))
+        
+        updateTime()
+        updateElements()
+    }
+    
+    @objc func eyeupdate() {
+        eyevalue = 100
+        updateTime()
+        updateElements()
+    }
+    
+    @objc func waterupdate() {
+        watervalue = 100
+        updateTime()
+        updateElements()
+    }
+    
+    @objc func fitnessupdate() {
+        fitnessbase += 10
         updateTime()
         updateElements()
     }
@@ -100,7 +138,8 @@ class GameScene: SKScene {
             watervalue -= minuteSince / 60 * 10
         }
         getSteps(completion:
-            { steps in self.fitnessvalue = CGFloat(steps) / self.fitnessGoal * 100 })
+            { steps in self.stepvalue = CGFloat(steps) / self.fitnessGoal * 100 })
+        fitnessvalue = fitnessbase + stepvalue
         healthvalue +=
             ((eyevalue - 60) / 100 + (watervalue - 60) / 100 + fitnessvalue / 100) / 20
 

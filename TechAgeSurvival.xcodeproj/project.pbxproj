@@ -18,6 +18,9 @@
 		6B098155242EC0A9000267A2 /* TechAgeSurvivalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B098154242EC0A9000267A2 /* TechAgeSurvivalTests.swift */; };
 		6B098160242EC0A9000267A2 /* TechAgeSurvivalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B09815F242EC0A9000267A2 /* TechAgeSurvivalUITests.swift */; };
 		6B09817B24302A30000267A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B09817A24302A30000267A2 /* HealthKit.framework */; };
+		6B09817F24303616000267A2 /* upicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B09817E24303616000267A2 /* upicon.png */; };
+		6B09818324303CB2000267A2 /* FTButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B09818224303CB1000267A2 /* FTButtonNode.swift */; };
+		6B09818524304A62000267A2 /* upicon_inverse.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B09818424304A61000267A2 /* upicon_inverse.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		6B098161242EC0A9000267A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B09817824302A30000267A2 /* TechAgeSurvival.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TechAgeSurvival.entitlements; sourceTree = "<group>"; };
 		6B09817A24302A30000267A2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		6B09817E24303616000267A2 /* upicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upicon.png; sourceTree = "<group>"; };
+		6B09818224303CB1000267A2 /* FTButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTButtonNode.swift; sourceTree = "<group>"; };
+		6B09818424304A61000267A2 /* upicon_inverse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upicon_inverse.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 		6B09812D242EC0A6000267A2 = {
 			isa = PBXGroup;
 			children = (
+				6B09817D243035F3000267A2 /* Asset */,
 				6B098138242EC0A6000267A2 /* TechAgeSurvival */,
 				6B098153242EC0A9000267A2 /* TechAgeSurvivalTests */,
 				6B09815E242EC0A9000267A2 /* TechAgeSurvivalUITests */,
@@ -142,6 +149,7 @@
 				6B09813B242EC0A6000267A2 /* GameScene.sks */,
 				6B09813F242EC0A6000267A2 /* GameScene.swift */,
 				6B09813D242EC0A6000267A2 /* Actions.sks */,
+				6B09818224303CB1000267A2 /* FTButtonNode.swift */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -170,6 +178,15 @@
 				6B09817A24302A30000267A2 /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B09817D243035F3000267A2 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				6B09818424304A61000267A2 /* upicon_inverse.png */,
+				6B09817E24303616000267A2 /* upicon.png */,
+			);
+			path = Asset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,9 +295,11 @@
 			files = (
 				6B098145242EC0A6000267A2 /* Main.storyboard in Resources */,
 				6B09813C242EC0A6000267A2 /* GameScene.sks in Resources */,
+				6B09818524304A62000267A2 /* upicon_inverse.png in Resources */,
 				6B098147242EC0A9000267A2 /* Assets.xcassets in Resources */,
 				6B09814A242EC0A9000267A2 /* LaunchScreen.storyboard in Resources */,
 				6B09813E242EC0A6000267A2 /* Actions.sks in Resources */,
+				6B09817F24303616000267A2 /* upicon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B098140242EC0A6000267A2 /* GameScene.swift in Sources */,
+				6B09818324303CB2000267A2 /* FTButtonNode.swift in Sources */,
 				6B098142242EC0A6000267A2 /* GameViewController.swift in Sources */,
 				6B09813A242EC0A6000267A2 /* AppDelegate.swift in Sources */,
 			);
