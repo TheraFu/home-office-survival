@@ -9,6 +9,7 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import HealthKit
 
 class GameViewController: UIViewController {
 
@@ -40,7 +41,40 @@ class GameViewController: UIViewController {
                 }
             }
         }
+        
+        getHealthKitPermission()
     }
+    
+    func delay(_ seconds: Double, completion: @escaping () -> ()) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            completion()
+        }
+    }
+    
+    func getHealthKitPermission() {
+        let healthKitStore:HKHealthStore = HKHealthStore()
+
+        delay(0.1) {
+            guard HKHealthStore.isHealthDataAvailable() else {
+                return
+            }
+
+            let stepsCount = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
+
+            healthKitStore.requestAuthorization(toShare: [], read: [stepsCount]) { (success, error) in
+                if success {
+                    print("Permission accept.")
+                }
+                else {
+                    if error != nil {
+                        print(error ?? "")
+                    }
+                    print("Permission denied.")
+                }
+            }
+        }
+    }
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
