@@ -25,7 +25,7 @@
 		6B09818B243055B3000267A2 /* GenderScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B09818A243055B3000267A2 /* GenderScene.swift */; };
 		6B09818D24305A86000267A2 /* GoalScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6B09818C24305A86000267A2 /* GoalScene.sks */; };
 		6B09818F24305A90000267A2 /* GoalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B09818E24305A90000267A2 /* GoalScene.swift */; };
-		6B09819324314FD0000267A2 /* roombg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B09819224314FCF000267A2 /* roombg.png */; };
+		6B098195243151BF000267A2 /* roombg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B098194243151BF000267A2 /* roombg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +71,7 @@
 		6B09818A243055B3000267A2 /* GenderScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderScene.swift; sourceTree = "<group>"; };
 		6B09818C24305A86000267A2 /* GoalScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GoalScene.sks; sourceTree = "<group>"; };
 		6B09818E24305A90000267A2 /* GoalScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalScene.swift; sourceTree = "<group>"; };
-		6B09819224314FCF000267A2 /* roombg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roombg.png; sourceTree = "<group>"; };
+		6B098194243151BF000267A2 /* roombg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = roombg.png; path = ../../../../../Downloads/roombg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,7 +197,7 @@
 		6B09817D243035F3000267A2 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
-				6B09819224314FCF000267A2 /* roombg.png */,
+				6B098194243151BF000267A2 /* roombg.png */,
 				6B09818424304A61000267A2 /* upicon_inverse.png */,
 				6B09817E24303616000267A2 /* upicon.png */,
 			);
@@ -313,8 +313,8 @@
 				6B09818924305493000267A2 /* GenderScene.sks in Resources */,
 				6B09813C242EC0A6000267A2 /* GameScene.sks in Resources */,
 				6B09818524304A62000267A2 /* upicon_inverse.png in Resources */,
-				6B09819324314FD0000267A2 /* roombg.png in Resources */,
 				6B098147242EC0A9000267A2 /* Assets.xcassets in Resources */,
+				6B098195243151BF000267A2 /* roombg.png in Resources */,
 				6B09814A242EC0A9000267A2 /* LaunchScreen.storyboard in Resources */,
 				6B09813E242EC0A6000267A2 /* Actions.sks in Resources */,
 				6B09817F24303616000267A2 /* upicon.png in Resources */,
