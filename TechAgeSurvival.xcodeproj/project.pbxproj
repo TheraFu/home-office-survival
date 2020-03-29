@@ -33,6 +33,7 @@
 		6B0981A52431644B000267A2 /* submitButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0981A42431644B000267A2 /* submitButton.png */; };
 		6B0981A7243165AF000267A2 /* upicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0981A6243165AF000267A2 /* upicon.png */; };
 		6B0981A92431669D000267A2 /* submitButton_inv.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0981A82431669D000267A2 /* submitButton_inv.png */; };
+		6B0981AB24316BC9000267A2 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0981AA24316BC9000267A2 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6B098136242EC0A6000267A2 /* TechAgeSurvival.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechAgeSurvival.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B098136242EC0A6000267A2 /* HomeOfficeSurvival.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeOfficeSurvival.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B098139242EC0A6000267A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B09813B242EC0A6000267A2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		6B09813D242EC0A6000267A2 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		6B0981A42431644B000267A2 /* submitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submitButton.png; sourceTree = "<group>"; };
 		6B0981A6243165AF000267A2 /* upicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = upicon.png; path = ../../../../../Desktop/upicon.png; sourceTree = "<group>"; };
 		6B0981A82431669D000267A2 /* submitButton_inv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submitButton_inv.png; sourceTree = "<group>"; };
+		6B0981AA24316BC9000267A2 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +131,7 @@
 		6B098137242EC0A6000267A2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6B098136242EC0A6000267A2 /* TechAgeSurvival.app */,
+				6B098136242EC0A6000267A2 /* HomeOfficeSurvival.app */,
 				6B098150242EC0A9000267A2 /* TechAgeSurvivalTests.xctest */,
 				6B09815B242EC0A9000267A2 /* TechAgeSurvivalUITests.xctest */,
 			);
@@ -211,6 +213,7 @@
 		6B09817D243035F3000267A2 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
+				6B0981AA24316BC9000267A2 /* logo.png */,
 				6B0981A82431669D000267A2 /* submitButton_inv.png */,
 				6B0981A6243165AF000267A2 /* upicon.png */,
 				6B0981A42431644B000267A2 /* submitButton.png */,
@@ -242,7 +245,7 @@
 			);
 			name = TechAgeSurvival;
 			productName = TechAgeSurvival;
-			productReference = 6B098136242EC0A6000267A2 /* TechAgeSurvival.app */;
+			productReference = 6B098136242EC0A6000267A2 /* HomeOfficeSurvival.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6B09814F242EC0A9000267A2 /* TechAgeSurvivalTests */ = {
@@ -331,6 +334,7 @@
 			files = (
 				6B0981A124316139000267A2 /* male_inv.png in Resources */,
 				6B09818D24305A86000267A2 /* GoalScene.sks in Resources */,
+				6B0981AB24316BC9000267A2 /* logo.png in Resources */,
 				6B0981A224316139000267A2 /* female_inv.png in Resources */,
 				6B0981A52431644B000267A2 /* submitButton.png in Resources */,
 				6B098145242EC0A6000267A2 /* Main.storyboard in Resources */,
@@ -555,8 +559,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skygazers.TechAgeSurvival;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skygazers.HomeOfficeSurvival;
+				PRODUCT_NAME = HomeOfficeSurvival;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -573,8 +577,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skygazers.TechAgeSurvival;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skygazers.HomeOfficeSurvival;
+				PRODUCT_NAME = HomeOfficeSurvival;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
