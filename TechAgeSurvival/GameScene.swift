@@ -33,33 +33,14 @@ class GameScene: SKScene {
     private var happinessbar : SKSpriteNode!
     
     private var eyevalue : CGFloat = 100
-    private var watervalue : CGFloat = 70
-    private var fitnessvalue : CGFloat = 50
-    private var healthvalue : CGFloat = 30
-    private var happinessvalue : CGFloat = 10
+    private var watervalue : CGFloat = 60
+    private var fitnessvalue : CGFloat = 0
+    private var healthvalue : CGFloat = 80
+    private var happinessvalue : CGFloat = 100
     
     private let progressBarSize: CGFloat = 200
     private var fitnessGoal: CGFloat = 8000
 
-    func getTodaysSteps(completion: @escaping (Double) -> Void) -> HKHealthStore {
-        let healthStore = HKHealthStore()
-        let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
-
-        let now = Date()
-        let startOfDay = Calendar.current.startOfDay(for: now)
-        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
-
-        let query = HKStatisticsQuery(quantityType: stepsQuantityType, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, _ in
-            guard let result = result, let sum = result.sumQuantity() else {
-                completion(0.0)
-                return
-            }
-            completion(sum.doubleValue(for: HKUnit.count()))
-        }
-
-        healthStore.execute(query)
-        return healthStore
-    }
     
     override func sceneDidLoad() {
 //        self.eyevalue.run(SKAction.fadeIn(withDuration: 2.0))
@@ -107,18 +88,32 @@ class GameScene: SKScene {
         
         let hour = calendar.component(.hour, from: dateNow) //11
         let minute = calendar.component(.minute, from: dateNow) //55
-        let weekDay = calendar.component(.weekday, from: dateNow) //6 (Friday)
+        let weekDay = calendar.component(.day, from: dateNow) //6 (Friday)
         
-        let minuteSince = CGFloat((Int(dateNow - self.lastUpdateDate) / 60) % 60)
-        eyevalue -= minuteSince * 2.0
-        watervalue -= minuteSince / 60 * 10
+        if (weekDay != calendar.component(.day, from: lastUpdateDate)) {
+            eyevalue = 100
+            watervalue = 60
+            happinessvalue = 100
+        } else {
+            let minuteSince = CGFloat((Int(dateNow - lastUpdateDate) / 60) % 60)
+            eyevalue -= minuteSince / 20 * 40
+            watervalue -= minuteSince / 60 * 10
+        }
         getSteps(completion:
             { steps in self.fitnessvalue = CGFloat(steps) / self.fitnessGoal * 100 })
-        
+        healthvalue +=
+            ((eyevalue - 60) / 100 + (watervalue - 60) / 100 + fitnessvalue / 100) / 20
+
         self.lastUpdateDate = dateNow
     }
     
     func updateElements() {
+        watervalue = min(100, max(0, watervalue))
+        eyevalue = min(100, max(0, eyevalue))
+        fitnessvalue = min(100, max(0, fitnessvalue))
+        happinessvalue = min(100, max(0, happinessvalue))
+        healthvalue = min(100, max(0, healthvalue))
+        
         self.eyelabel.text = String(Int(self.eyevalue))
         self.waterlabel.text = String(Int(self.watervalue))
         self.fitnesslabel.text = String(Int(self.fitnessvalue))
