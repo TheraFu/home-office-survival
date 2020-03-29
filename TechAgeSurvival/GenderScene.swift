@@ -24,9 +24,10 @@ class GenderScene: SKScene {
         self.malebutton = self.childNode(withName: "//maleButton") as? FTButtonNode
         self.femalebutton = self.childNode(withName: "//femaleButton") as? FTButtonNode
         
-        let buttonTextureSelected = SKTexture(imageNamed: "upicon_inverse.png")
-        malebutton.selectedTexture = buttonTextureSelected
-        femalebutton.selectedTexture = buttonTextureSelected
+        let maleSelected = SKTexture(imageNamed: "male_inv.png")
+        let femaleSelected = SKTexture(imageNamed: "female_inv.png")
+        malebutton.selectedTexture = maleSelected
+        femalebutton.selectedTexture = femaleSelected
         malebutton.setButtonAction(
             target: self, triggerEvent: .TouchUpInside,
             action: #selector(self.updategenderMale))
